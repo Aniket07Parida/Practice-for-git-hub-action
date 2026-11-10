@@ -25,4 +25,11 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/my-python-app:latest
+          tags: 
+      - name: Build and Push
+        uses: docker/build-push-action@v6
+        with:
+          context:
+          push: true
+          tags: aniketparida158088/notes-app:latest
+
