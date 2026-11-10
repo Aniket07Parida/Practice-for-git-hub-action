@@ -5,24 +5,23 @@ on:
   push:
     branches: [master]
   workflow_dispatch:
-    
 
 jobs:
   build-run-push:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: Docker Setup [Login]
-        uses: docker/login-action@v4
+        uses: docker/login-action@v3
         with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-       - name: Build and Push
-         uses: docker/build-push-action@v6
+      - name: Build and Push
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: ./Dockerfile
