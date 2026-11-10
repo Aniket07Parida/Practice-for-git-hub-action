@@ -12,7 +12,7 @@ jobs:
         run: echo "Clone the code"
 
   build:
-    needs: [code]
+    needs: [codes]
     runs-on: ubuntu-latest
     steps:
       - name: Build using Docker
