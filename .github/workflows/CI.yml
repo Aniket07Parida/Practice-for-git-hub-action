@@ -1,22 +1,21 @@
-# Goal
 
+# Goal
 name: CI
 
-on: 
+on:
   push:
-  branches: [master]
+    branches: [master]
 
 jobs:
-   code: 
-     runs-on: ubuntu-latest
-     steps:
-       - name: Checkout code
-         uses: actions/checkout@v7
-         
-       - name: Log in to Docker Hub
+  code:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-     
-    
