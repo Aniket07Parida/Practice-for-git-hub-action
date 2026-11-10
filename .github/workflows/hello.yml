@@ -11,7 +11,7 @@ on:
 # Should be inside the workflow
 jobs:
   say_hello:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     # Steps
     # Should be inside the Job
