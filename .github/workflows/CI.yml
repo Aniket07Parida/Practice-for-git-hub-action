@@ -3,11 +3,10 @@ name: CI
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
 
 jobs:
-  code:
+  build-run-push:
     runs-on: ubuntu-latest
 
     steps:
