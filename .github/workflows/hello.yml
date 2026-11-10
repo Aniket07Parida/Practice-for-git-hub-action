@@ -1,0 +1,20 @@
+
+# Workflow
+# Should have a name
+name: Hello
+
+# Trigger
+on:
+  workflow_dispatch:
+
+# Job
+# Should be inside the workflow
+jobs:
+  say_hello:
+    runs-on: ubuntu-22.04
+
+    # Steps
+    # Should be inside the Job
+    steps:
+      - name: Say hello everyone
+        run: echo "Hello Dosto"
